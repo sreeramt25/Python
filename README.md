@@ -1,47 +1,71 @@
-Task Descriptions
 
-Task 1: Create DataFrames and Save as CSV
 
-Create three separate DataFrames corresponding to the datasets provided and save them as .csv files.
+ 📊 Dataset Explanation and Tasks  
 
-Task 2: Handle Missing Values in "Project" DataFrame
+ 📂 Dataset Attributes  
 
-Compute and replace missing values in the "cost" column using a running average with a for loop.
+ 🔹 Employee Table  
+1. 🆔 ID - Assigned number for the Project Head in charge.  
+2. 👤 Name - Person handling the project.  
+3. ⚧ Gender - Male (M) / Female (F).  
+4. 📍 City - Location of the project.  
+5. 📅 Age - Number of years the project will be active.  
+6. 📌 Status - Status of the project.  
+7. 📊 Designation Level - Position of the Project Head.  
+   - 🚨 Excessive failures result in a downgrade of designation.  
+   - 🌟 A good reputation increases chances of promotion.  
+   - Designation Scale: 
+     - 1️⃣ - Highest
+     - 2️⃣ & 3️⃣ - Mid-level positions  
+     - 4️⃣ - Lowest
+     - ❌ If an employee exceeds level 4, they lose project eligibility.  
 
-Task 3: Split Name Column in "Employee" DataFrame
+ 📝 Tasks Overview  
 
-Split the "name" column into "First Name" and "Last Name", then remove the original "name" column.
+ ✅ Task 1: Create & Save Dataframes  
+- Create three separate dataframes in Python for each table.  
+- Save them as three `.csv` files.  
+- From Task 2 to Task 10, use only the saved `.csv` files.  
 
-Task 4: Merge All DataFrames
+ 🔄 Task 2: Handle Missing Values  
+- The cost column in the Project dataframe has missing values.  
+- Replace missing values using the **running average**.  
+- Use a **for loop** for this task.  
 
-Join all three DataFrames into a single DataFrame named Final.
+ ✂️ Task 3: Split Name Column  
+- Split the name column in the Employee dataframe into:  
+  - First Name  
+  - Last Name  
+- Remove the old name column.  
 
-Task 5: Add a Bonus Column
+ 🔗 Task 4: Merge Dataframes  
+- Join all three dataframes into a single dataframe named Final.  
 
-Provide a 5% bonus based on the project cost to employees who have finished their projects.
+ 💰 Task 5: Add Bonus Column  
+- Add a new column Bonus in the Final dataframe.  
+- Employees who have completed projects receive a 5% bonus based on project cost  
 
-Task 6: Demote or Remove Employees Based on Status
+ 📉 Task 6: Demote & Remove Employees  
+- Demote the designation level by 1 for employees whose projects have failed.  
+- Remove employees whose designation level exceeds 4.  
 
-Reduce the designation level by 1 for employees whose projects have a status of "fail". Remove employees if their designation level exceeds 4.
+ 🎭 Task 7: Add Titles & Drop Gender  
+- Add "Mr." or "Mrs." as a prefix to the First Name column.  
+- Drop the Gender column.  
 
-Task 7: Add Salutations and Remove Gender Column
+ 📈 Task 8: Promote Employees  
+- Promote the designation level by 1 for employees above 29 years old.  
 
-Prefix "Mr." for males and "Mrs." for females to the first name column. Drop the gender column.
+ 📊 Task 9: Calculate Total Project Cost  
+- Calculate the total cost of all projects handled by each employee.  
+- Save the result in a new dataframe TotalProjCost with the following columns:  
+  - 🆔 ID  
+  - 👤 First Name  
+  - 💲 Total Cost  
 
-Task 8: Promote Employees Based on Age
+ 🔍 Task 10: Filter Employees by City Name  
+- Print details of employees whose city name contains the letter "o".  
 
-Increase the designation level by 1 for employees aged 30 years or more.
+---
 
-Task 9: Compute Total Project Cost for Each Employee
 
-Sum the project costs for each employee and create a new DataFrame TotalProjCost with columns:
-
-ID
-
-First Name
-
-Total Cost
-
-Task 10: Filter Employees Based on City Name
-
-Print all employee details whose city name contains the letter "o".
